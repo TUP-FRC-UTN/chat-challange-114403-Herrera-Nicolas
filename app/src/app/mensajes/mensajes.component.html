@@ -1,0 +1,27 @@
+<div class="card">
+  <div [classList]="color + ' card-header text-white'">
+    <strong>Usuario {{ userName }}</strong>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col d-flex flex-column">
+        <label>Mensaje:</label>
+        <textarea
+          class="form-control mb-1"
+          rows="3"
+          name="msj"
+          id="msj"
+          [(ngModel)]="msj"
+          required="true"
+        ></textarea>
+        <button
+          class="btn btn-primary"
+          style="width: min-content"
+          (click)="enviar()"
+        >
+          Guardar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
